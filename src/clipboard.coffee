@@ -1,7 +1,7 @@
 crypto = require 'crypto'
 clipboard = require './safe-clipboard'
 
-# Extended: Represents the clipboard used for copying and pasting in Atom.
+# Extended: Represents the clipboard used for copying and pasting in GeneXus.
 #
 # An instance of this class is always available as the `atom.clipboard` global.
 #

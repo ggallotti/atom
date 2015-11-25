@@ -1,6 +1,6 @@
-# Atom Build
+# GeneXus Build
 
-This folder contains the grunt configuration and tasks to build Atom.
+This folder contains the grunt configuration and tasks to build GeneXus.
 
 It was moved from the root of the repository so that any native modules used
 would be compiled against node's v8 headers since anything stored in

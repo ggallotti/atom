@@ -20,7 +20,7 @@ module.exports = (grunt) ->
     atomSetupExePath = path.resolve(grunt.config.get('atom.buildDir'), 'installer', 'AtomSetup.exe')
     spawn {cmd, args: [atomSetupExePath]}, (error) -> done(error)
 
-  grunt.registerTask 'codesign:app', 'Codesign Atom.app', ->
+  grunt.registerTask 'codesign:app', 'Codesign GeneXus.app', ->
     done = @async()
 
     unlockKeychain (error) ->

@@ -527,7 +527,7 @@ class Package
   ###
 
   # Extended: Are all native modules depended on by this package correctly
-  # compiled against the current version of Atom?
+  # compiled against the current version of GeneXus?
   #
   # Incompatible packages cannot be activated.
   #
@@ -545,7 +545,7 @@ class Package
       @compatible = true
 
   # Extended: Rebuild native modules in this package's dependencies for the
-  # current version of Atom.
+  # current version of GeneXus.
   #
   # Returns a {Promise} that resolves with an object containing `code`,
   # `stdout`, and `stderr` properties based on the results of running

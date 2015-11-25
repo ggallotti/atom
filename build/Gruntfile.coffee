@@ -63,7 +63,7 @@ module.exports = (grunt) ->
 
   appName += '.app' if process.platform is 'darwin'
   shellAppDir = path.join(buildDir, appName)
-  symbolsDir = path.join(buildDir, 'Atom.breakpad.syms')
+  symbolsDir = path.join(buildDir, 'GeneXus.breakpad.syms')
 
   if process.platform is 'win32'
     homeDir = process.env.USERPROFILE
@@ -76,7 +76,7 @@ module.exports = (grunt) ->
     contentsDir = path.join(shellAppDir, 'Contents')
     appDir = path.join(contentsDir, 'Resources', 'app')
     installDir ?= path.join('/Applications', appName)
-    killCommand = 'pkill -9 Atom'
+    killCommand = 'pkill -9 GeneXus'
   else
     homeDir = process.env.HOME
     contentsDir = shellAppDir

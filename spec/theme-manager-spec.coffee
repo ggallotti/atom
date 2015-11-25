@@ -385,7 +385,7 @@ describe "atom.themes", ->
       expect(activeThemeNames).toContain('atom-dark-syntax')
 
   describe "when in safe mode", ->
-    describe 'when the enabled UI and syntax themes are bundled with Atom', ->
+    describe 'when the enabled UI and syntax themes are bundled with GeneXus', ->
       beforeEach ->
         atom.config.set('core.themes', ['atom-light-ui', 'atom-dark-syntax'])
 
@@ -398,7 +398,7 @@ describe "atom.themes", ->
         expect(activeThemeNames).toContain('atom-light-ui')
         expect(activeThemeNames).toContain('atom-dark-syntax')
 
-    describe 'when the enabled UI and syntax themes are not bundled with Atom', ->
+    describe 'when the enabled UI and syntax themes are not bundled with GeneXus', ->
       beforeEach ->
         atom.config.set('core.themes', ['installed-dark-ui', 'installed-dark-syntax'])
 
@@ -411,7 +411,7 @@ describe "atom.themes", ->
         expect(activeThemeNames).toContain('atom-dark-ui')
         expect(activeThemeNames).toContain('atom-dark-syntax')
 
-    describe 'when the enabled UI theme is not bundled with Atom', ->
+    describe 'when the enabled UI theme is not bundled with GeneXus', ->
       beforeEach ->
         atom.config.set('core.themes', ['installed-dark-ui', 'atom-light-syntax'])
 
@@ -424,7 +424,7 @@ describe "atom.themes", ->
         expect(activeThemeNames).toContain('atom-dark-ui')
         expect(activeThemeNames).toContain('atom-light-syntax')
 
-    describe 'when the enabled syntax theme is not bundled with Atom', ->
+    describe 'when the enabled syntax theme is not bundled with GeneXus', ->
       beforeEach ->
         atom.config.set('core.themes', ['atom-light-ui', 'installed-dark-syntax'])
 

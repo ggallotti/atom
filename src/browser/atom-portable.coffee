@@ -28,7 +28,7 @@ class AtomPortable
       fs.removeSync(writePermissionTestFile)
       writable = true
     catch error
-      message = "Failed to use portable Atom home directory (#{@getPortableAtomHomePath()}).  Using the default instead (#{defaultHome}).  #{error.message}"
+      message = "Failed to use portable GeneXus home directory (#{@getPortableAtomHomePath()}).  Using the default instead (#{defaultHome}).  #{error.message}"
 
     ipc.on 'check-portable-home-writable', (event) ->
       event.sender.send 'check-portable-home-writable-response', {writable, message}

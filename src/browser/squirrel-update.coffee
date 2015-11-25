@@ -17,9 +17,9 @@ else
   setxPath = 'setx.exe'
 
 # Registry keys used for context menu
-fileKeyPath = 'HKCU\\Software\\Classes\\*\\shell\\Atom'
-directoryKeyPath = 'HKCU\\Software\\Classes\\directory\\shell\\Atom'
-backgroundKeyPath = 'HKCU\\Software\\Classes\\directory\\background\\shell\\Atom'
+fileKeyPath = 'HKCU\\Software\\Classes\\*\\shell\\GeneXus'
+directoryKeyPath = 'HKCU\\Software\\Classes\\directory\\shell\\GeneXus'
+backgroundKeyPath = 'HKCU\\Software\\Classes\\directory\\background\\shell\\GeneXus'
 environmentKeyPath = 'HKCU\\Environment'
 
 # Spawn a command and invoke the callback when it completes with an error
@@ -57,7 +57,7 @@ spawnSetx = (args, callback) ->
 spawnUpdate = (args, callback) ->
   spawn(updateDotExe, args, callback)
 
-# Install the Open with Atom explorer context menu items via the registry.
+# Install the Open with GeneXus explorer context menu items via the registry.
 installContextMenu = (callback) ->
   addToRegistry = (args, callback) ->
     args.unshift('add')
@@ -65,7 +65,7 @@ installContextMenu = (callback) ->
     spawnReg(args, callback)
 
   installMenu = (keyPath, arg, callback) ->
-    args = [keyPath, '/ve', '/d', 'Open with Atom']
+    args = [keyPath, '/ve', '/d', 'Open with GeneXus']
     addToRegistry args, ->
       args = [keyPath, '/v', 'Icon', '/d', "\"#{process.execPath}\""]
       addToRegistry args, ->
@@ -117,7 +117,7 @@ getPath = (callback) ->
     else
       callback(new Error('Registry query for PATH failed'))
 
-# Uninstall the Open with Atom explorer context menu items via the registry.
+# Uninstall the Open with GeneXus explorer context menu items via the registry.
 uninstallContextMenu = (callback) ->
   deleteFromRegistry = (keyPath, callback) ->
     spawnReg(['delete', keyPath, '/f'], callback)
@@ -128,7 +128,7 @@ uninstallContextMenu = (callback) ->
 
 # Add atom and apm to the PATH
 #
-# This is done by adding .cmd shims to the root bin folder in the Atom
+# This is done by adding .cmd shims to the root bin folder in the GeneXus
 # install directory that point to the newly installed versions inside
 # the versioned app directories.
 addCommandsToPath = (callback) ->
@@ -195,7 +195,7 @@ createShortcuts = (callback) ->
 # provided by Squirrel's Update.exe
 updateShortcuts = (callback) ->
   if homeDirectory = fs.getHomeDirectory()
-    desktopShortcutPath = path.join(homeDirectory, 'Desktop', 'Atom.lnk')
+    desktopShortcutPath = path.join(homeDirectory, 'Desktop', 'GeneXus.lnk')
     # Check if the desktop shortcut has been previously deleted and
     # and keep it deleted if it was
     fs.exists desktopShortcutPath, (desktopShortcutExists) ->
@@ -215,11 +215,11 @@ removeShortcuts = (callback) ->
 
 exports.spawn = spawnUpdate
 
-# Is the Update.exe installed with Atom?
+# Is the Update.exe installed with GeneXus?
 exports.existsSync = ->
   fs.existsSync(updateDotExe)
 
-# Restart Atom using the version pointed to by the atom.cmd shim
+# Restart GeneXus using the version pointed to by the atom.cmd shim
 exports.restartAtom = (app) ->
   if projectPath = global.atomApplication?.lastFocusedWindow?.projectPath
     args = [projectPath]

@@ -11,11 +11,11 @@
   ```sh
   git clone https://github.com/atom/atom.git
   cd atom
-  script/build # Creates application at /Applications/Atom.app
+  script/build # Creates application at /Applications/GeneXus.app
   ```
 
 ### `script/build` Options
-  * `--install-dir` - The full path to the final built application (must include `.app` in the path), e.g. `script/build --install-dir /Users/username/full/path/to/Atom.app`
+  * `--install-dir` - The full path to the final built application (must include `.app` in the path), e.g. `script/build --install-dir /Users/username/full/path/to/GeneXus.app`
   * `--build-dir` - Build the application in this directory.
   * `--verbose` - Verbose mode. A lot more information output.
 

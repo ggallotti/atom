@@ -151,7 +151,7 @@ class Workspace extends Model
   # Updates the application's title and proxy icon based on whichever file is
   # open.
   updateWindowTitle: =>
-    appName = 'Atom'
+    appName = 'GeneXus'
     projectPaths = @project.getPaths() ? []
     if item = @getActivePaneItem()
       itemPath = item.getPath?()
@@ -371,7 +371,7 @@ class Workspace extends Model
   Section: Opening
   ###
 
-  # Essential: Opens the given URI in Atom asynchronously.
+  # Essential: Opens the given URI in GeneXus asynchronously.
   # If the URI is already open, the existing item for that URI will be
   # activated. If no URI is given, or no registered opener can open
   # the URI, a new empty {TextEditor} will be created.
@@ -417,7 +417,7 @@ class Workspace extends Model
 
     @openURIInPane(uri, pane, options)
 
-  # Open Atom's license in the active pane.
+  # Open GeneXus's license in the active pane.
   openLicense: ->
     @open(path.join(process.resourcesPath, 'LICENSE.md'))
 
@@ -507,7 +507,7 @@ class Workspace extends Model
     largeFileMode = fileSize >= 2 * 1048576 # 2MB
     if fileSize >= 20 * 1048576 # 20MB
       choice = @applicationDelegate.confirm
-        message: 'Atom will be unresponsive during the loading of very large files.'
+        message: 'GeneXus will be unresponsive during the loading of very large files.'
         detailedMessage: "Do you still want to load this file?"
         buttons: ["Proceed", "Cancel"]
       if choice is 1

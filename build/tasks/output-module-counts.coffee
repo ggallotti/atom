@@ -54,7 +54,7 @@ module.exports = (grunt) ->
           break
 
     if getAtomTotal() > 0
-      console.log "Atom Modules: #{getAtomTotal()}"
+      console.log "GeneXus Modules: #{getAtomTotal()}"
       sortModuleNames(atomModules).forEach (name) ->
         {count, versions, atom} = atomModules[name]
         grunt.log.error "#{name}: #{count} (#{Object.keys(versions).join(', ')})" if count > 1

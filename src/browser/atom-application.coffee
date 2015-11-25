@@ -23,14 +23,14 @@ LocationSuffixRegExp = /(:\d+)(:\d+)?$/
 
 # The application's singleton class.
 #
-# It's the entry point into the Atom application and maintains the global state
+# It's the entry point into the GeneXus application and maintains the global state
 # of the application.
 #
 module.exports =
 class AtomApplication
   _.extend @prototype, EventEmitter.prototype
 
-  # Public: The entry point into the Atom application.
+  # Public: The entry point into the GeneXus application.
   @open: (options) ->
     unless options.socketPath?
       if process.platform is 'win32'
@@ -97,7 +97,7 @@ class AtomApplication
     else if urlsToOpen.length > 0
       @openUrl({urlToOpen, devMode, safeMode}) for urlToOpen in urlsToOpen
     else
-      # Always open a editor window if this is the first instance of Atom.
+      # Always open a editor window if this is the first instance of GeneXus.
       @openPath({pidToKillWhenClosed, newWindow, devMode, safeMode, profileStartup})
 
   # Public: Removes the {AtomWindow} from the global window list.

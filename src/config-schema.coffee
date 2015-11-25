@@ -42,7 +42,7 @@ module.exports =
         default: ['one-dark-ui', 'one-dark-syntax']
         items:
           type: 'string'
-        description: 'Names of UI and syntax themes which will be used when Atom starts.'
+        description: 'Names of UI and syntax themes which will be used when GeneXus starts.'
       projectHome:
         type: 'string'
         default: path.join(fs.getHomeDirectory(), 'github')
@@ -218,7 +218,7 @@ module.exports =
         description: 'Ensure file contents aren\'t lost if there is an I/O error during save by making a temporary backup copy.'
       invisibles:
         type: 'object'
-        description: 'A hash of characters Atom will use to render whitespace characters. Keys are whitespace character types, values are rendered characters (use value false to turn off individual whitespace character types).'
+        description: 'A hash of characters GeneXus will use to render whitespace characters. Keys are whitespace character types, values are rendered characters (use value false to turn off individual whitespace character types).'
         properties:
           eol:
             type: ['boolean', 'string']

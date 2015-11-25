@@ -50,7 +50,7 @@ PaneElement = require './pane-element'
 TextEditorElement = require './text-editor-element'
 {createGutterView} = require './gutter-component-helpers'
 
-# Essential: Atom global for dealing with packages, themes, menus, and the window.
+# Essential: GeneXus global for dealing with packages, themes, menus, and the window.
 #
 # An instance of this class is always available as the `atom` global.
 module.exports =
@@ -369,7 +369,7 @@ class AtomEnvironment extends Model
     @emitter.on 'did-fail-assertion', callback
 
   ###
-  Section: Atom Details
+  Section: GeneXus Details
   ###
 
   # Public: Returns a {Boolean} that is `true` if the current window is in development mode.
@@ -384,7 +384,7 @@ class AtomEnvironment extends Model
   inSpecMode: ->
     @specMode ?= @getLoadSettings().isSpec
 
-  # Public: Get the version of the Atom application.
+  # Public: Get the version of the GeneXus application.
   #
   # Returns the version text {String}.
   getVersion: ->
@@ -411,10 +411,10 @@ class AtomEnvironment extends Model
     getWindowLoadSettings()
 
   ###
-  Section: Managing The Atom Window
+  Section: Managing The GeneXus Window
   ###
 
-  # Essential: Open a new Atom window using the given options.
+  # Essential: Open a new GeneXus window using the given options.
   #
   # Calling this method without an options parameter will open a prompt to pick
   # a file/folder to open in the new window.
@@ -424,7 +424,7 @@ class AtomEnvironment extends Model
   #   * `newWindow` A {Boolean}, true to always open a new window instead of
   #     reusing existing windows depending on the paths to open.
   #   * `devMode` A {Boolean}, true to open the window in development mode.
-  #     Development mode loads the Atom source from the locally cloned
+  #     Development mode loads the GeneXus source from the locally cloned
   #     repository and also loads all the packages in ~/.atom/dev/packages
   #   * `safeMode` A {Boolean}, true to open the window in safe mode. Safe
   #     mode prevents all packages installed to ~/.atom/packages from loading.
@@ -888,5 +888,5 @@ class AtomEnvironment extends Model
 
 # Preserve this deprecation until 2.0. Sorry. Should have removed Q sooner.
 Promise.prototype.done = (callback) ->
-  deprecate("Atom now uses ES6 Promises instead of Q. Call promise.then instead of promise.done")
+  deprecate("GeneXus now uses ES6 Promises instead of Q. Call promise.then instead of promise.done")
   @then(callback)

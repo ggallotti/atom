@@ -17,7 +17,7 @@
   'ctrl-h': 'core:backspace'
   'ctrl-d': 'core:delete'
 
-  # Atom Specific
+  # GeneXus Specific
   'enter': 'core:confirm'
   'escape': 'core:cancel'
   'up': 'core:move-up'
@@ -81,12 +81,12 @@
   'cmd-_': 'window:decrease-font-size'
   'cmd-0': 'window:reset-font-size'
 
-  'cmd-k up': 'pane:split-up' # Atom Specific
-  'cmd-k down': 'pane:split-down' # Atom Specific
-  'cmd-k left': 'pane:split-left' # Atom Specific
-  'cmd-k right': 'pane:split-right' # Atom Specific
-  'cmd-k cmd-w': 'pane:close' # Atom Specific
-  'cmd-k alt-cmd-w': 'pane:close-other-items' # Atom Specific
+  'cmd-k up': 'pane:split-up' # GeneXus Specific
+  'cmd-k down': 'pane:split-down' # GeneXus Specific
+  'cmd-k left': 'pane:split-left' # GeneXus Specific
+  'cmd-k right': 'pane:split-right' # GeneXus Specific
+  'cmd-k cmd-w': 'pane:close' # GeneXus Specific
+  'cmd-k alt-cmd-w': 'pane:close-other-items' # GeneXus Specific
   'cmd-k cmd-p': 'window:focus-previous-pane'
   'cmd-k cmd-n': 'window:focus-next-pane'
   'cmd-k cmd-up': 'window:focus-pane-above'
@@ -126,7 +126,7 @@
   'ctrl-e': 'editor:move-to-end-of-line'
   'ctrl-k': 'editor:cut-to-end-of-line'
 
-  # Atom Specific
+  # GeneXus Specific
   'ctrl-W': 'editor:select-word'
 
   # Sublime Parity
@@ -144,7 +144,7 @@
   'ctrl-alt-delete': 'editor:delete-to-end-of-subword'
 
 'atom-workspace atom-text-editor:not([mini])':
-  # Atom specific
+  # GeneXus specific
   'alt-cmd-z': 'editor:checkout-head-revision'
   'cmd-<': 'editor:scroll-to-cursor'
   'alt-cmd-ctrl-f': 'editor:fold-selection'
@@ -167,8 +167,8 @@
 
   'cmd-alt-[': 'editor:fold-current-row'
   'cmd-alt-]': 'editor:unfold-current-row'
-  'cmd-alt-{': 'editor:fold-all' # Atom Specific
-  'cmd-alt-}': 'editor:unfold-all' # Atom Specific
+  'cmd-alt-{': 'editor:fold-all' # GeneXus Specific
+  'cmd-alt-}': 'editor:unfold-all' # GeneXus Specific
   'cmd-k cmd-0': 'editor:unfold-all'
   'cmd-k cmd-1': 'editor:fold-at-indent-level-1'
   'cmd-k cmd-2': 'editor:fold-at-indent-level-2'

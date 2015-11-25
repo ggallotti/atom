@@ -11,7 +11,7 @@ Package = require './package'
 ThemePackage = require './theme-package'
 {isDeprecatedPackage, getDeprecatedPackageMetadata} = require './deprecated-packages'
 
-# Extended: Package manager for coordinating the lifecycle of Atom packages.
+# Extended: Package manager for coordinating the lifecycle of GeneXus packages.
 #
 # An instance of this class is always available as the `atom.packages` global.
 #
@@ -161,7 +161,7 @@ class PackageManager
     packagePath = path.join(@resourcePath, 'node_modules', name)
     return packagePath if @hasAtomEngine(packagePath)
 
-  # Public: Is the package with the given name bundled with Atom?
+  # Public: Is the package with the given name bundled with GeneXus?
   #
   # * `name` - The {String} package name.
   #

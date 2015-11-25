@@ -3,7 +3,7 @@
   'ctrl-pageup': 'pane:show-previous-item'
   'ctrl-pagedown': 'pane:show-next-item'
 
-  # Atom Specific
+  # GeneXus Specific
   'enter': 'core:confirm'
   'escape': 'core:cancel'
   'up': 'core:move-up'
@@ -66,12 +66,12 @@
   'ctrl-_': 'window:decrease-font-size'
   'ctrl-0': 'window:reset-font-size'
 
-  'ctrl-k up': 'pane:split-up' # Atom Specific
-  'ctrl-k down': 'pane:split-down' # Atom Specific
-  'ctrl-k left': 'pane:split-left' # Atom Specific
-  'ctrl-k right': 'pane:split-right' # Atom Specific
-  'ctrl-k ctrl-w': 'pane:close' # Atom Specific
-  'ctrl-k alt-ctrl-w': 'pane:close-other-items' # Atom Specific
+  'ctrl-k up': 'pane:split-up' # GeneXus Specific
+  'ctrl-k down': 'pane:split-down' # GeneXus Specific
+  'ctrl-k left': 'pane:split-left' # GeneXus Specific
+  'ctrl-k right': 'pane:split-right' # GeneXus Specific
+  'ctrl-k ctrl-w': 'pane:close' # GeneXus Specific
+  'ctrl-k alt-ctrl-w': 'pane:close-other-items' # GeneXus Specific
   'ctrl-k ctrl-p': 'window:focus-previous-pane'
   'ctrl-k ctrl-n': 'window:focus-next-pane'
   'ctrl-k ctrl-up':    'window:focus-pane-above'
@@ -115,7 +115,7 @@
   'ctrl-l': 'editor:select-line'
 
 'atom-workspace atom-text-editor:not([mini])':
-  # Atom specific
+  # GeneXus specific
   'alt-ctrl-z': 'editor:checkout-head-revision'
   'ctrl-<': 'editor:scroll-to-cursor'
   'alt-ctrl-f': 'editor:fold-selection'
@@ -133,8 +133,8 @@
 
   'ctrl-alt-[': 'editor:fold-current-row'
   'ctrl-alt-]': 'editor:unfold-current-row'
-  'ctrl-alt-{': 'editor:fold-all' # Atom Specific
-  'ctrl-alt-}': 'editor:unfold-all' # Atom Specific
+  'ctrl-alt-{': 'editor:fold-all' # GeneXus Specific
+  'ctrl-alt-}': 'editor:unfold-all' # GeneXus Specific
   'ctrl-k ctrl-0': 'editor:unfold-all'
   'ctrl-k ctrl-1': 'editor:fold-at-indent-level-1'
   'ctrl-k ctrl-2': 'editor:fold-at-indent-level-2'

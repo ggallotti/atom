@@ -34,7 +34,7 @@ module.exports = (grunt) ->
     contentsDir = grunt.config.get('atom.contentsDir')
     switch process.platform
       when 'darwin'
-        path.join(contentsDir, 'MacOS', 'Atom')
+        path.join(contentsDir, 'MacOS', 'GeneXus')
       when 'linux'
         path.join(contentsDir, 'atom')
       when 'win32'

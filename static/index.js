@@ -71,7 +71,7 @@
 
     // Start the crash reporter before anything else.
     require('crash-reporter').start({
-      productName: 'Atom',
+      productName: 'GeneXus',
       companyName: 'GitHub',
       // By explicitly passing the app version here, we could save the call
       // of "require('remote').require('app').getVersion()".

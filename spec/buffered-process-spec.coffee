@@ -112,5 +112,5 @@ describe "BufferedProcess", ->
     waitsFor -> exitCallback.callCount is 1
 
     runs ->
-      expect(stderr).toContain 'apm - Atom Package Manager'
+      expect(stderr).toContain 'apm - GeneXus Package Manager'
       expect(stdout).toEqual ''

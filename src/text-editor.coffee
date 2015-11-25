@@ -19,7 +19,7 @@ GutterContainer = require './gutter-container'
 # instead.
 #
 # A single {TextBuffer} can belong to multiple editors. For example, if the
-# same file is open in two different panes, Atom creates a separate editor for
+# same file is open in two different panes, GeneXus creates a separate editor for
 # each pane. If the buffer is manipulated the changes are reflected in both
 # editors, but each maintains its own cursor position, folded lines, etc.
 #

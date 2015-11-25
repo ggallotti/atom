@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# This script wraps the `Atom` binary, allowing the `chromedriver` server to
+# This script wraps the `GeneXus` binary, allowing the `chromedriver` server to
 # execute it with positional arguments and environment variables. `chromedriver`
 # only allows 'switches' to be specified when starting a browser, not positional
 # arguments, so this script accepts the following special switches:
 #
-# * `atom-path`: The path to the `Atom` binary.
-# * `atom-args`: A space-separated list of positional arguments to pass to Atom.
+# * `atom-path`: The path to the `GeneXus` binary.
+# * `atom-args`: A space-separated list of positional arguments to pass to GeneXus.
 # * `atom-env`:  A space-separated list of key=value pairs representing environment
-#                variables to set for Atom.
+#                variables to set for GeneXus.
 #
-# Any other switches will be passed through to `Atom`.
+# Any other switches will be passed through to `GeneXus`.
 
 atom_path=""
 atom_switches=()
@@ -42,6 +42,6 @@ for arg in "$@"; do
   esac
 done
 
-echo "Launching Atom" >&2
+echo "Launching GeneXus" >&2
 echo "${atom_path}" ${atom_args[@]} ${atom_switches[@]} >&2
 exec "${atom_path}" ${atom_args[@]} ${atom_switches[@]}

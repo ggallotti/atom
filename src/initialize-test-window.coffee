@@ -5,7 +5,7 @@ cloneObject = (object) ->
 
 module.exports = ({blobStore}) ->
   # Start the crash reporter before anything else.
-  require('crash-reporter').start(productName: 'Atom', companyName: 'GitHub')
+  require('crash-reporter').start(productName: 'GeneXus', companyName: 'GitHub')
   remote = require 'remote'
 
   exitWithStatusCode = (status) ->

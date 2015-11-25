@@ -16,9 +16,9 @@ module.exports = (grunt) ->
 
     if process.platform is 'darwin'
       cp 'electron/Electron.app', shellAppDir, filter: /default_app/
-      fs.renameSync path.join(shellAppDir, 'Contents', 'MacOS', 'Electron'), path.join(shellAppDir, 'Contents', 'MacOS', 'Atom')
-      fs.renameSync path.join(shellAppDir, 'Contents', 'Frameworks', 'Electron Helper.app'), path.join(shellAppDir, 'Contents', 'Frameworks', 'Atom Helper.app')
-      fs.renameSync path.join(shellAppDir, 'Contents', 'Frameworks', 'Atom Helper.app', 'Contents', 'MacOS', 'Electron Helper'), path.join(shellAppDir, 'Contents', 'Frameworks', 'Atom Helper.app', 'Contents', 'MacOS', 'Atom Helper')
+      fs.renameSync path.join(shellAppDir, 'Contents', 'MacOS', 'Electron'), path.join(shellAppDir, 'Contents', 'MacOS', 'GeneXus')
+      fs.renameSync path.join(shellAppDir, 'Contents', 'Frameworks', 'Electron Helper.app'), path.join(shellAppDir, 'Contents', 'Frameworks', 'GeneXus Helper.app')
+      fs.renameSync path.join(shellAppDir, 'Contents', 'Frameworks', 'GeneXus Helper.app', 'Contents', 'MacOS', 'Electron Helper'), path.join(shellAppDir, 'Contents', 'Frameworks', 'GeneXus Helper.app', 'Contents', 'MacOS', 'GeneXus Helper')
     else
       cp 'electron', shellAppDir, filter: /default_app/
 
@@ -50,7 +50,7 @@ module.exports = (grunt) ->
       else
         nonPackageDirectories.push(directory)
 
-    # Put any paths here that shouldn't end up in the built Atom.app
+    # Put any paths here that shouldn't end up in the built GeneXus.app
     # so that it doesn't becomes larger than it needs to be.
     ignoredPaths = [
       path.join('git-utils', 'deps')
@@ -170,7 +170,7 @@ module.exports = (grunt) ->
     cp path.join('resources', 'app-icons', channel, 'png', '1024.png'), path.join(appDir, 'resources', 'atom.png')
 
     if process.platform is 'darwin'
-      cp path.join('resources', 'app-icons', channel, 'atom.icns'), path.resolve(appDir, '..', 'atom.icns')
+      cp path.join('resources', 'app-icons', channel, 'gx.icns'), path.resolve(appDir, '..', 'gx.icns')
       cp path.join('resources', 'mac', 'file.icns'), path.resolve(appDir, '..', 'file.icns')
       cp path.join('resources', 'mac', 'speakeasy.pem'), path.resolve(appDir, '..', 'speakeasy.pem')
 

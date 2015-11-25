@@ -30,7 +30,7 @@ Ubuntu LTS 12.04 64-bit is the recommended platform.
 ### Arch
 
 * `sudo pacman -S --needed gconf base-devel git nodejs npm libgnome-keyring python2`
-* `export PYTHON=/usr/bin/python2` before building Atom.
+* `export PYTHON=/usr/bin/python2` before building GeneXus.
 
 ### Slackware
 
@@ -44,27 +44,27 @@ Ubuntu LTS 12.04 64-bit is the recommended platform.
 
 If you have problems with permissions don't forget to prefix with `sudo`
 
-1. Clone the Atom repository:
+1. Clone the GeneXus repository:
 
   ```sh
   git clone https://github.com/atom/atom
   cd atom
   ```
 
-2. Checkout the latest Atom release:
+2. Checkout the latest GeneXus release:
 
   ```sh
   git fetch -p
   git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
   ```
 
-3. Build Atom:
+3. Build GeneXus:
 
   ```sh
   script/build
   ```
 
-  This will create the atom application at `$TMPDIR/atom-build/Atom`.
+  This will create the atom application at `$TMPDIR/atom-build/GeneXus`.
 
 4. Install the `atom` and `apm` commands to `/usr/local/bin` by executing:
 
@@ -72,9 +72,9 @@ If you have problems with permissions don't forget to prefix with `sudo`
   sudo script/grunt install
   ```
 
-  To use the newly installed Atom, quit and restart all running Atom instances.
+  To use the newly installed GeneXus, quit and restart all running GeneXus instances.
 
-5. *Optionally*, you may generate distributable packages of Atom at `$TMPDIR/atom-build`. Currently, `.deb` and `.rpm` package types are supported. To create a `.deb` package run:
+5. *Optionally*, you may generate distributable packages of GeneXus at `$TMPDIR/atom-build`. Currently, `.deb` and `.rpm` package types are supported. To create a `.deb` package run:
 
   ```sh
   script/grunt mkdeb
@@ -104,7 +104,7 @@ script/build --build-dir /build/atom/here
 
 ### TypeError: Unable to watch path
 
-If you get following error with a big traceback right after Atom starts:
+If you get following error with a big traceback right after GeneXus starts:
 
   ```
   TypeError: Unable to watch path
@@ -117,7 +117,7 @@ this is the reason for this error you can issue
   sudo sysctl fs.inotify.max_user_watches=32768
   ```
 
-and restart Atom.  If Atom now works fine, you can make this setting permanent:
+and restart GeneXus.  If GeneXus now works fine, you can make this setting permanent:
 
   ```sh
   echo 32768 | sudo tee -a /proc/sys/fs/inotify/max_user_watches
@@ -143,7 +143,7 @@ sudo update-alternatives --install /usr/bin/node node /usr/bin/nodejs 1 --slave 
 
 ### AttributeError: 'module' object has no attribute 'script_main'
 
-If you get following error with a big traceback while building Atom:
+If you get following error with a big traceback while building GeneXus:
 
   ```
   sys.exit(gyp.script_main()) AttributeError: 'module' object has no attribute 'script_main' gyp ERR!

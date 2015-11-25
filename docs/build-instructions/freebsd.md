@@ -15,7 +15,7 @@ FreeBSD -RELEASE 64-bit is the recommended platform.
   ```sh
   git clone https://github.com/atom/atom
   cd atom
-  script/build # Creates application at $TMPDIR/atom-build/Atom
+  script/build # Creates application at $TMPDIR/atom-build/GeneXus
   sudo script/grunt install # Installs command to /usr/local/bin/atom
   ```
 

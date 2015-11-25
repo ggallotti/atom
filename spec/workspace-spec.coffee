@@ -76,7 +76,7 @@ describe "Workspace", ->
           expect(editor4.getCursorScreenPosition()).toEqual [2, 4]
 
           expect(atom.workspace.getActiveTextEditor().getPath()).toBe editor3.getPath()
-          expect(document.title).toBe "#{path.basename(editor3.getPath())} - #{atom.project.getPaths()[0]} - Atom"
+          expect(document.title).toBe "#{path.basename(editor3.getPath())} - #{atom.project.getPaths()[0]} - GeneXus"
 
     describe "where there are no open panes or editors", ->
       it "constructs the view with no open editors", ->
@@ -725,7 +725,7 @@ describe "Workspace", ->
     describe "when the project has no path", ->
       it "sets the title to 'untitled'", ->
         atom.project.setPaths([])
-        expect(document.title).toBe 'untitled - Atom'
+        expect(document.title).toBe 'untitled - GeneXus'
 
     describe "when the project has a path", ->
       beforeEach ->
@@ -735,25 +735,25 @@ describe "Workspace", ->
       describe "when there is an active pane item", ->
         it "sets the title to the pane item's title plus the project path", ->
           item = atom.workspace.getActivePaneItem()
-          expect(document.title).toBe "#{item.getTitle()} - #{atom.project.getPaths()[0]} - Atom"
+          expect(document.title).toBe "#{item.getTitle()} - #{atom.project.getPaths()[0]} - GeneXus"
 
       describe "when the title of the active pane item changes", ->
         it "updates the window title based on the item's new title", ->
           editor = atom.workspace.getActivePaneItem()
           editor.buffer.setPath(path.join(temp.dir, 'hi'))
-          expect(document.title).toBe "#{editor.getTitle()} - #{atom.project.getPaths()[0]} - Atom"
+          expect(document.title).toBe "#{editor.getTitle()} - #{atom.project.getPaths()[0]} - GeneXus"
 
       describe "when the active pane's item changes", ->
         it "updates the title to the new item's title plus the project path", ->
           atom.workspace.getActivePane().activateNextItem()
           item = atom.workspace.getActivePaneItem()
-          expect(document.title).toBe "#{item.getTitle()} - #{atom.project.getPaths()[0]} - Atom"
+          expect(document.title).toBe "#{item.getTitle()} - #{atom.project.getPaths()[0]} - GeneXus"
 
       describe "when the last pane item is removed", ->
         it "updates the title to contain the project's path", ->
           atom.workspace.getActivePane().destroy()
           expect(atom.workspace.getActivePaneItem()).toBeUndefined()
-          expect(document.title).toBe "#{atom.project.getPaths()[0]} - Atom"
+          expect(document.title).toBe "#{atom.project.getPaths()[0]} - GeneXus"
 
       describe "when an inactive pane's item changes", ->
         it "does not update the title", ->
@@ -777,7 +777,7 @@ describe "Workspace", ->
         })
         workspace2.deserialize(atom.workspace.serialize(), atom.deserializers)
         item = atom.workspace.getActivePaneItem()
-        expect(document.title).toBe "#{item.getTitle()} - #{atom.project.getPaths()[0]} - Atom"
+        expect(document.title).toBe "#{item.getTitle()} - #{atom.project.getPaths()[0]} - GeneXus"
         workspace2.destroy()
 
   describe "document edited status", ->

@@ -1,6 +1,6 @@
 {
   "name": "atom-bundled-apm",
-  "description": "Atom's bundled apm",
+  "description": "GeneXus's bundled apm",
   "repository": {
     "type": "git",
     "url": "https://github.com/atom/atom.git"

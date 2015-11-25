@@ -14,7 +14,7 @@ Color = require './color'
 ScopedPropertyStore = require 'scoped-property-store'
 ScopeDescriptor = require './scope-descriptor'
 
-# Essential: Used to access all of Atom's configuration details.
+# Essential: Used to access all of GeneXus's configuration details.
 #
 # An instance of this class is always available as the `atom.config` global.
 #
@@ -496,7 +496,7 @@ class Config
   #     See [the scopes docs](https://atom.io/docs/latest/behind-atom-scoped-settings-scopes-and-scope-descriptors)
   #     for more information.
   #
-  # Returns the value from Atom's default settings, the user's configuration
+  # Returns the value from GeneXus's default settings, the user's configuration
   # file in the type specified by the configuration schema.
   get: ->
     if arguments.length > 1
@@ -536,7 +536,7 @@ class Config
 
   # Essential: Sets the value for a configuration setting.
   #
-  # This value is stored in Atom's internal configuration file.
+  # This value is stored in GeneXus's internal configuration file.
   #
   # ### Examples
   #

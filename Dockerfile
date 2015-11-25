@@ -1,5 +1,5 @@
 # VERSION:        0.1
-# DESCRIPTION:    Image to build Atom and create a .rpm file
+# DESCRIPTION:    Image to build GeneXus and create a .rpm file
 
 # Base docker image
 FROM fedora:21

@@ -1,14 +1,14 @@
 # Your keymap
 #
-# Atom keymaps work similarly to style sheets. Just as style sheets use
-# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# GeneXus keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, GeneXus keymaps use selectors to associate
 # keystrokes with events in specific contexts. Unlike style sheets however,
 # each selector can only be declared once.
 #
 # You can create a new keybinding in this file by typing "key" and then hitting
 # tab.
 #
-# Here's an example taken from Atom's built-in keymap:
+# Here's an example taken from GeneXus's built-in keymap:
 #
 # 'atom-text-editor':
 #   'enter': 'editor:newline'
@@ -23,5 +23,5 @@
 #
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it in the 
-# Atom Flight Manual:
+# GeneXus Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson

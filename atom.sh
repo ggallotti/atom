@@ -56,31 +56,31 @@ fi
 
 if [ $OS == 'Mac' ]; then
   if [ -n "$BETA_VERSION" ]; then
-    ATOM_APP_NAME="Atom Beta.app"
+    ATOM_APP_NAME="GeneXus Beta.app"
   else
-    ATOM_APP_NAME="Atom.app"
+    ATOM_APP_NAME="GeneXus.app"
   fi
 
   if [ -z "${ATOM_PATH}" ]; then
-    # If ATOM_PATH isnt set, check /Applications and then ~/Applications for Atom.app
+    # If ATOM_PATH isnt set, check /Applications and then ~/Applications for GeneXus.app
     if [ -x "/Applications/$ATOM_APP_NAME" ]; then
       ATOM_PATH="/Applications"
     elif [ -x "$HOME/Applications/$ATOM_APP_NAME" ]; then
       ATOM_PATH="$HOME/Applications"
     else
-      # We havent found an Atom.app, use spotlight to search for Atom
-      ATOM_PATH="$(mdfind "kMDItemCFBundleIdentifier == 'com.github.atom'" | grep -v ShipIt | head -1 | xargs -0 dirname)"
+      # We havent found an GeneXus.app, use spotlight to search for GeneXus
+      ATOM_PATH="$(mdfind "kMDItemCFBundleIdentifier == 'com.github.genexus'" | grep -v ShipIt | head -1 | xargs -0 dirname)"
 
-      # Exit if Atom can't be found
+      # Exit if GeneXus can't be found
       if [ ! -x "$ATOM_PATH/$ATOM_APP_NAME" ]; then
-        echo "Cannot locate Atom.app, it is usually located in /Applications. Set the ATOM_PATH environment variable to the directory containing Atom.app."
+        echo "Cannot locate GeneXus.app, it is usually located in /Applications. Set the ATOM_PATH environment variable to the directory containing GeneXus.app."
         exit 1
       fi
     fi
   fi
 
   if [ $EXPECT_OUTPUT ]; then
-    "$ATOM_PATH/$ATOM_APP_NAME/Contents/MacOS/Atom" --executed-from="$(pwd)" --pid=$$ "$@"
+    "$ATOM_PATH/$ATOM_APP_NAME/Contents/MacOS/GeneXus" --executed-from="$(pwd)" --pid=$$ "$@"
     exit $?
   else
     open -a "$ATOM_PATH/$ATOM_APP_NAME" -n --args --executed-from="$(pwd)" --pid=$$ --path-environment="$PATH" "$@"
@@ -100,7 +100,7 @@ elif [ $OS == 'Linux' ]; then
 
   : ${TMPDIR:=/tmp}
 
-  [ -x "$ATOM_PATH" ] || ATOM_PATH="$TMPDIR/atom-build/Atom/atom"
+  [ -x "$ATOM_PATH" ] || ATOM_PATH="$TMPDIR/atom-build/GeneXus/atom"
 
   if [ $EXPECT_OUTPUT ]; then
     "$ATOM_PATH" --executed-from="$(pwd)" --pid=$$ "$@"
@@ -116,13 +116,13 @@ elif [ $OS == 'Linux' ]; then
   fi
 fi
 
-# Exits this process when Atom is used as $EDITOR
+# Exits this process when GeneXus is used as $EDITOR
 on_die() {
   exit 0
 }
 trap 'on_die' SIGQUIT SIGTERM
 
-# If the wait flag is set, don't exit this process until Atom tells it to.
+# If the wait flag is set, don't exit this process until GeneXus tells it to.
 if [ $WAIT ]; then
   while true; do
     sleep 1

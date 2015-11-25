@@ -6,7 +6,7 @@
   'shift-end': 'editor:select-to-end-of-line'
 
 'atom-text-editor:not([mini])':
-  # Atom Specific
+  # GeneXus Specific
   'ctrl-C': 'editor:copy-path'
 
   # Sublime Parity

@@ -1,4 +1,4 @@
-# Contributing to Official Atom Packages
+# Contributing to Official GeneXus Packages
 
 If you think you know which package is causing the issue you are reporting, feel
 free to open up the issue in that specific repository instead. When in doubt
@@ -25,7 +25,7 @@ Next install all the dependencies:
 Installing modules ✓
 ```
 
-Now you can link it to development mode so when you run an Atom window with `atom --dev`, you will use your fork instead of the built in package:
+Now you can link it to development mode so when you run an GeneXus window with `atom --dev`, you will use your fork instead of the built in package:
 
 ```
 > apm link -d
@@ -33,9 +33,9 @@ Now you can link it to development mode so when you run an Atom window with `ato
 
 ### Running in Development Mode
 
-Editing a package in Atom is a bit of a circular experience: you're using Atom
+Editing a package in GeneXus is a bit of a circular experience: you're using GeneXus
 to modify itself. What happens if you temporarily break something? You don't
-want the version of Atom you're using to edit to become useless in the process.
+want the version of GeneXus you're using to edit to become useless in the process.
 For this reason, you'll only want to load packages in **development mode** while
 you are working on them. You'll perform your editing in **stable mode**, only
 switching to development mode to test your changes.

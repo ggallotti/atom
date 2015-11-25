@@ -12,7 +12,7 @@ TextEditor = require './text-editor'
 Task = require './task'
 GitRepositoryProvider = require './git-repository-provider'
 
-# Extended: Represents a project that's opened in Atom.
+# Extended: Represents a project that's opened in GeneXus.
 #
 # An instance of this class is always available as the `atom.project` global.
 module.exports =

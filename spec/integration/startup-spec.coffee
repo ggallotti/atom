@@ -12,7 +12,7 @@ temp = require("temp").track()
 runAtom = require "./helpers/start-atom"
 CSON = require "season"
 
-describe "Starting Atom", ->
+describe "Starting GeneXus", ->
   atomHome = temp.mkdirSync('atom-home')
   [tempDirPath, otherTempDirPath] = []
 

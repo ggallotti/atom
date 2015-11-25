@@ -12,7 +12,7 @@ grunt = null
 token = process.env.ATOM_ACCESS_TOKEN
 defaultHeaders =
   Authorization: "token #{token}"
-  'User-Agent': 'Atom'
+  'User-Agent': 'GeneXus'
 
 module.exports = (gruntObject) ->
   grunt = gruntObject
@@ -73,7 +73,7 @@ getAssets = ->
     when 'darwin'
       [
         {assetName: 'atom-mac.zip', sourcePath: appName}
-        {assetName: 'atom-mac-symbols.zip', sourcePath: 'Atom.breakpad.syms'}
+        {assetName: 'atom-mac-symbols.zip', sourcePath: 'GeneXus.breakpad.syms'}
         {assetName: 'atom-api.json', sourcePath: 'atom-api.json'}
       ]
     when 'win32'

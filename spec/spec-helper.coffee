@@ -77,7 +77,7 @@ beforeEach ->
       resolvePackagePath(packageName)
   resolvePackagePath = _.bind(spy.originalValue, atom.packages)
 
-  # prevent specs from modifying Atom's menus
+  # prevent specs from modifying GeneXus's menus
   spyOn(atom.menu, 'sendToBrowserProcess')
 
   # reset config before each spec

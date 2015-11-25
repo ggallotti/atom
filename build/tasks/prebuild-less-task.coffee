@@ -69,7 +69,7 @@ module.exports = (grunt) ->
       importPaths = grunt.config.get('less.options.paths')
       themeMains = []
       for theme in configuration
-        # TODO Use AtomPackage class once it runs outside of an Atom context
+        # TODO Use AtomPackage class once it runs outside of an GeneXus context
         themePath = path.resolve('node_modules', theme)
         if fs.existsSync(path.join(themePath, 'stylesheets'))
           stylesheetsDir = path.join(themePath, 'stylesheets')

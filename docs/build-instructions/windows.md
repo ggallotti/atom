@@ -71,7 +71,7 @@ If none of this works, do install Github Desktop and use its Git shell. Makes li
 
 * `error MSB8020: The build tools for Visual Studio 2010 (Platform Toolset = 'v100') cannot be found.`
 
-  * If you're building Atom with Visual Studio 2013 or above make sure the `GYP_MSVS_VERSION` environment variable is set, and then re-run `script/build`:
+  * If you're building GeneXus with Visual Studio 2013 or above make sure the `GYP_MSVS_VERSION` environment variable is set, and then re-run `script/build`:
 
     ```bash
     $env:GYP_MSVS_VERSION='2013' # '2015' if using Visual Studio 2015, and so on

@@ -47,9 +47,9 @@ module.exports = (grunt) ->
 
         strings =
           CompanyName: 'GitHub, Inc.'
-          FileDescription: 'Atom'
+          FileDescription: 'GeneXus'
           LegalCopyright: 'Copyright (C) 2015 GitHub, Inc. All rights reserved'
-          ProductName: 'Atom'
+          ProductName: 'GeneXus'
           ProductVersion: version
 
         rcedit = require('rcedit')

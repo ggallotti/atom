@@ -1,6 +1,6 @@
 {
   "name": "atom-build",
-  "description": "Atom build",
+  "description": "GeneXus build",
   "repository": {
     "type": "git",
     "url": "https://github.com/atom/atom.git"

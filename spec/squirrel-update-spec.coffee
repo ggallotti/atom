@@ -17,7 +17,7 @@ describe "Windows squirrel updates", ->
     originalSpawn = ChildProcess.spawn
     spyOn(ChildProcess, 'spawn').andCallFake (command, args) ->
       if path.basename(command) is 'Update.exe' and args?[0] is '--createShortcut'
-        fs.writeFileSync(path.join(tempHomeDirectory, 'Desktop', 'Atom.lnk'), '')
+        fs.writeFileSync(path.join(tempHomeDirectory, 'Desktop', 'GeneXus.lnk'), '')
 
       # Just spawn something that won't actually modify the host
       if process.platform is 'win32'
@@ -68,7 +68,7 @@ describe "Windows squirrel updates", ->
       expect(SquirrelUpdate.handleStartupEvent(app, '--not-squirrel')).toBe false
 
   it "keeps the desktop shortcut deleted on updates if it was previously deleted after install", ->
-    desktopShortcutPath = path.join(tempHomeDirectory, 'Desktop', 'Atom.lnk')
+    desktopShortcutPath = path.join(tempHomeDirectory, 'Desktop', 'GeneXus.lnk')
     expect(fs.existsSync(desktopShortcutPath)).toBe false
 
     app = quit: jasmine.createSpy('quit')

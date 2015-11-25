@@ -54,7 +54,7 @@ handleStartupEventWithSquirrel = ->
   SquirrelUpdate.handleStartupEvent(app, squirrelCommand)
 
 setupCrashReporter = ->
-  crashReporter.start(productName: 'Atom', companyName: 'GitHub')
+  crashReporter.start(productName: 'GeneXus', companyName: 'GitHub')
 
 setupAtomHome = ({setPortable}) ->
   return if process.env.ATOM_HOME
@@ -85,18 +85,18 @@ parseCommandLine = ->
   version = app.getVersion()
   options = yargs(process.argv[1..]).wrap(100)
   options.usage """
-    Atom Editor v#{version}
+    GeneXus Editor v#{version}
 
     Usage: atom [options] [path ...]
 
     One or more paths to files or folders may be specified. If there is an
-    existing Atom window that contains all of the given folders, the paths
+    existing GeneXus window that contains all of the given folders, the paths
     will be opened in that window. Otherwise, they will be opened in a new
     window.
 
     Environment Variables:
 
-      ATOM_DEV_RESOURCE_PATH  The path from which Atom loads source code in dev mode.
+      ATOM_DEV_RESOURCE_PATH  The path from which GeneXus loads source code in dev mode.
                               Defaults to `~/github/atom`.
 
       ATOM_HOME               The root path for all configuration files and folders.
@@ -111,9 +111,9 @@ parseCommandLine = ->
   options.alias('l', 'log-file').string('l').describe('l', 'Log all output to file.')
   options.alias('n', 'new-window').boolean('n').describe('n', 'Open a new window.')
   options.boolean('profile-startup').describe('profile-startup', 'Create a profile of the startup execution time.')
-  options.alias('r', 'resource-path').string('r').describe('r', 'Set the path to the Atom source directory and enable dev-mode.')
+  options.alias('r', 'resource-path').string('r').describe('r', 'Set the path to the GeneXus source directory and enable dev-mode.')
   options.boolean('safe').describe('safe', 'Do not load packages from ~/.atom/packages or ~/.atom/dev/packages.')
-  options.boolean('portable').describe('portable', 'Set portable mode. Copies the ~/.atom folder to be a sibling of the installed Atom location if a .atom folder is not already there.')
+  options.boolean('portable').describe('portable', 'Set portable mode. Copies the ~/.atom folder to be a sibling of the installed GeneXus location if a .atom folder is not already there.')
   options.alias('t', 'test').boolean('t').describe('t', 'Run the specified specs and exit with error code on failures.')
   options.string('timeout').describe('timeout', 'When in test mode, waits until the specified time (in minutes) and kills the process (exit code: 130).')
   options.alias('v', 'version').boolean('v').describe('v', 'Print the version.')
